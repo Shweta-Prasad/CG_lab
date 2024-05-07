@@ -1,0 +1,11 @@
+#include<windows.h>
+#include <GL/gl.h>
+#include<GL/glu.h>
+or
+#include<GL/glut.h>
+glut - openGL utility Toolkit
+
+stdio.h , stdlib.h , math.h 
+
+title bar-
+glutCreateWindow("
