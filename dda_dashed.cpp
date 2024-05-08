@@ -10,6 +10,16 @@ void init() {
     glColor3f(0.0, 0.0, 0.0);
     gluOrtho2D(-250, 250, -250, 250);
 }
+void drawAxes() {
+    glBegin(GL_LINES);
+    // X-axis
+    glVertex2i(-500, 0);
+    glVertex2i(500, 0);
+    // Y-axis
+    glVertex2i(0, -500);
+    glVertex2i(0, 500);
+    glEnd();
+}
 
 void drawPixel(int x, int y) {
     glBegin(GL_POINTS);
@@ -52,17 +62,20 @@ void ddaDashedLine(int x1, int y1, int x2, int y2) {
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
-    //ddaDashedLine(x1, y1, x2, y2);
+    drawAxes();
+//    ddaDashedLine(x1, y1_coord, x2, y2);
     ddaDashedLine(-100, -100, 100, 100);
     glFlush();
 }
 
 int main(int argc, char** argv) {
-/*  cout << "Enter x1 and y1: ";
-    cin >> x1 >> y1;
+/*
+    cout << "Enter x1 and y1: ";
+    cin >> x1 >> y1_coord;
     cout << "Enter x2 and y2: ";
     cin >> x2 >> y2;
 */
+
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize(500, 500);

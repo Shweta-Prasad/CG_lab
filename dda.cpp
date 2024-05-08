@@ -7,7 +7,18 @@ int x1, x2, y1, y2;
 void init() {
     glClearColor(1.0, 1.0, 1.0, 1.0);  //white background
     glColor3f(0.0, 0.0, 0.0);  // Set drawing color to black
-    gluOrtho2D(0, 500, 0, 500);  // Set the coordinate system range
+    gluOrtho2D(-500, 500, -500, 500);  // Set the coordinate system range
+}
+
+void drawAxes() {
+    glBegin(GL_LINES);
+    // X-axis
+    glVertex2i(-500, 0);
+    glVertex2i(500, 0);
+    // Y-axis
+    glVertex2i(0, -500);
+    glVertex2i(0, 500);
+    glEnd();
 }
 
 void drawPixel(int x, int y) {
@@ -43,13 +54,15 @@ void ddaSolidLine(int x1, int y1, int x2, int y2) {
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
+    drawAxes();
     //ddaSolidLine(x1, y1, x2, y2);
-    ddaSolidLine(258, 269, 358, 369);
+    ddaSolidLine(100, 100, 300, 300);
     glFlush();
 }
 
 int main(int argc, char** argv) {
- /* cout << "Enter x1 and y1: ";
+/*
+    cout << "Enter x1 and y1: ";
     cin >> x1 >> y1;
     cout << "Enter x2 and y2: ";
     cin >> x2 >> y2;
