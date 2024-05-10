@@ -1,0 +1,71 @@
+1. glBegin(mode):
+
+   - Begins the specification of a primitive (e.g., points, lines, triangles).
+   - `mode` specifies the type of primitive to be drawn (e.g., `GL_POINTS`, `GL_LINES`, `GL_TRIANGLES`).
+
+
+2. glEnd():
+
+   - Ends the specification of a primitive.
+
+
+3. glClear(mask):
+
+   - Clears buffers to preset values.
+   - `mask` specifies which buffers are to be cleared (e.g., `GL_COLOR_BUFFER_BIT`, `GL_DEPTH_BUFFER_BIT`).
+
+
+4. glFlush():
+
+   - Forces all issued commands to be executed as quickly as possible.
+
+
+5. glColor3f(r, g, b):
+
+   - Sets the current color.
+   - `r`, `g`, `b` specify the red, green, and blue components of the color, respectively (range: 0.0 to 1.0).
+
+
+6. glVertex2i(x, y):
+
+   - Specifies a 2D vertex.
+   - `x` and `y` specify the coordinates of the vertex.
+
+
+7. glPointSize(size):
+
+   - Sets the size of rasterized points.
+   - `size` specifies the size of the points in pixels.
+
+
+8. glLineWidth(width):
+
+   - Sets the width of rasterized lines.
+   - `width` specifies the width of the lines in pixels.
+
+
+9. glMatrixMode(mode):
+
+   - Specifies which matrix stack is the target for subsequent matrix operations.
+   - `mode` can be `GL_MODELVIEW`, `GL_PROJECTION`, or `GL_TEXTURE`.
+
+
+10. glLoadIdentity():
+
+    - Replaces the current matrix with the identity matrix.
+
+
+11. gluOrtho2D(left, right, bottom, top):
+
+    - Sets up a 2D orthographic viewing region.
+    - `left`, `right`, `bottom`, `top` specify the coordinates of the clipping rectangle.
+
+
+12. glReadPixels(x, y, width, height, format, type, pixels):
+
+    - Reads a block of pixels from the frame buffer.
+    - `x` and `y` specify the lower left corner of the region to be read.
+    - `width` and `height` specify the dimensions of the region.
+    - `format` specifies the format of the pixel data (e.g., `GL_RGB`, `GL_RGBA`).
+    - `type` specifies the data type of the pixel data (e.g., `GL_UNSIGNED_BYTE`, `GL_FLOAT`).
+    - `pixels` points to the buffer where the pixel data will be stored.
